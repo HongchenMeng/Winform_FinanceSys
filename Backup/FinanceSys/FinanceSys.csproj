@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B397A7B6-2AD7-4A04-98A0-3B598B818DDB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinanceSys</RootNamespace>
+    <AssemblyName>FinanceSys</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\大管家固定资产管理系统\System\Equipment_Manager\bin\Debug\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="SideBar, Version=1.0.2813.28543, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebService1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WebService\bin\WebService1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\Canshu.cs" />
+    <Compile Include="App_Code\Message.cs" />
+    <Compile Include="App_Code\Page.cs" />
+    <Compile Include="App_Code\Text.cs" />
+    <Compile Include="FinanceManagerSys\Form_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_Account.Designer.cs">
+      <DependentUpon>Form_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_Break.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_Break.Designer.cs">
+      <DependentUpon>Form_Break.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeAdd.Designer.cs">
+      <DependentUpon>Form_IncomeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeAddCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeAddCon.Designer.cs">
+      <DependentUpon>Form_IncomeAddCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_ContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_ContractList.Designer.cs">
+      <DependentUpon>Form_ContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeList.Designer.cs">
+      <DependentUpon>Form_IncomeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_IncomeType.Designer.cs">
+      <DependentUpon>Form_IncomeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_InvoiceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_InvoiceInfo.Designer.cs">
+      <DependentUpon>Form_InvoiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_InvoiceXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_InvoiceXX.Designer.cs">
+      <DependentUpon>Form_InvoiceXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_Money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_Money.Designer.cs">
+      <DependentUpon>Form_Money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OpenInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OpenInvoice.Designer.cs">
+      <DependentUpon>Form_OpenInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutlayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutlayAdd.Designer.cs">
+      <DependentUpon>Form_OutlayAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutlayList.Designer.cs">
+      <DependentUpon>Form_OutlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManagerSys\Form_OutTypeAdd.Designer.cs">
+      <DependentUpon>Form_OutTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Backup.Designer.cs">
+      <DependentUpon>Form_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UpdatePwd.Designer.cs">
+      <DependentUpon>Form_UpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserAdd.Designer.cs">
+      <DependentUpon>Form_UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserList.Designer.cs">
+      <DependentUpon>Form_UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_DepartmentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_DepartmentList.Designer.cs">
+      <DependentUpon>Form_DepartmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmployeeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmployeeAdd.Designer.cs">
+      <DependentUpon>Form_EmployeeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmployeeList.Designer.cs">
+      <DependentUpon>Form_EmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmpWageAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmpWageAdd.Designer.cs">
+      <DependentUpon>Form_EmpWageAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmpWageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_EmpWageList.Designer.cs">
+      <DependentUpon>Form_EmpWageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_LeaveAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_LeaveAdd.Designer.cs">
+      <DependentUpon>Form_LeaveAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_LeaveList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_LeaveList.Designer.cs">
+      <DependentUpon>Form_LeaveList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_Month.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_Month.Designer.cs">
+      <DependentUpon>Form_Month.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_PayMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_PayMonth.Designer.cs">
+      <DependentUpon>Form_PayMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_Syslog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_Syslog.Designer.cs">
+      <DependentUpon>Form_Syslog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageChange.Designer.cs">
+      <DependentUpon>Form_WageChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageChangeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageChangeList.Designer.cs">
+      <DependentUpon>Form_WageChangeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageGrantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelSys\Form_WageGrantList.Designer.cs">
+      <DependentUpon>Form_WageGrantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FinanceManagerSys\Form_Account.resx">
+      <DependentUpon>Form_Account.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_Break.resx">
+      <DependentUpon>Form_Break.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_IncomeAdd.resx">
+      <DependentUpon>Form_IncomeAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_IncomeAddCon.resx">
+      <DependentUpon>Form_IncomeAddCon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_ContractList.resx">
+      <DependentUpon>Form_ContractList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_IncomeList.resx">
+      <DependentUpon>Form_IncomeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_IncomeType.resx">
+      <DependentUpon>Form_IncomeType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_InvoiceInfo.resx">
+      <DependentUpon>Form_InvoiceInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_InvoiceXX.resx">
+      <DependentUpon>Form_InvoiceXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_Money.resx">
+      <DependentUpon>Form_Money.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_OpenInvoice.resx">
+      <DependentUpon>Form_OpenInvoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_OutlayAdd.resx">
+      <DependentUpon>Form_OutlayAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_OutlayList.resx">
+      <DependentUpon>Form_OutlayList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManagerSys\Form_OutTypeAdd.resx">
+      <DependentUpon>Form_OutTypeAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Backup.resx">
+      <DependentUpon>Form_Backup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UpdatePwd.resx">
+      <DependentUpon>Form_UpdatePwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserAdd.resx">
+      <DependentUpon>Form_UserAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserList.resx">
+      <DependentUpon>Form_UserList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_DepartmentList.resx">
+      <DependentUpon>Form_DepartmentList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_EmployeeAdd.resx">
+      <DependentUpon>Form_EmployeeAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_EmployeeList.resx">
+      <DependentUpon>Form_EmployeeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_EmpWageAdd.resx">
+      <DependentUpon>Form_EmpWageAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_EmpWageList.resx">
+      <DependentUpon>Form_EmpWageList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_LeaveAdd.resx">
+      <DependentUpon>Form_LeaveAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_LeaveList.resx">
+      <DependentUpon>Form_LeaveList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_Month.resx">
+      <DependentUpon>Form_Month.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_PayMonth.resx">
+      <DependentUpon>Form_PayMonth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_Syslog.resx">
+      <DependentUpon>Form_Syslog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_WageChange.resx">
+      <DependentUpon>Form_WageChange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_WageChangeList.resx">
+      <DependentUpon>Form_WageChangeList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelSys\Form_WageGrantList.resx">
+      <DependentUpon>Form_WageGrantList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceManagerSys\FinanceManagerSys.csproj">
+      <Project>{2022C560-3BD0-48E8-9076-23E5C9B3DD5D}</Project>
+      <Name>FinanceManagerSys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonnelSys\PersonnelSys.csproj">
+      <Project>{3A528D09-DF12-400E-B644-2FE260A65C08}</Project>
+      <Name>PersonnelSys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicLibrary\PublicLibrary.csproj">
+      <Project>{E30ACBB9-9B75-49A1-B62B-F3205A621E9A}</Project>
+      <Name>PublicLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1041.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deduct.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\152.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECKMRK.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\撤销.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W95MBX01.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
